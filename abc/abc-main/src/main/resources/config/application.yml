@@ -31,7 +31,7 @@ spring:
   application:
     name: abc
   profiles:
-    include: springdoc, management
+    include: springdoc, management, noauth
   autoconfigure:
     exclude: org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration
 

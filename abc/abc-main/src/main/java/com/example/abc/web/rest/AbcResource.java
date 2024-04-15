@@ -134,7 +134,7 @@ public class AbcResource {
         log.debug("REST request to get Abc : {}", id);
 
         Optional<AbcDTO> abcDTO = abcService.findOne(id);
-        return ResponseUtil.wrapOrNotFound(abcDTO);
+        return ResponseEntity.of(abcDTO);
     }
 
     /**

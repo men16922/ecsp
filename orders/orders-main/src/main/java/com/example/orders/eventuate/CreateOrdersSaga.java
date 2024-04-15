@@ -103,6 +103,7 @@ public class CreateOrdersSaga implements SimpleSaga<Orders> {
     }
 
     public void approve(Orders data) {
+        log.info("CHECKER ");
         ordersRepository.findById(data.getId()).get().setStatus(Orders.OrdersStatus.APPROVED);
     }
 }

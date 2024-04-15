@@ -135,7 +135,7 @@ public class XyzResource {
         log.debug("REST request to get Xyz : {}", id);
 
         Optional<XyzDTO> xyzDTO = xyzService.findOne(id);
-        return ResponseUtil.wrapOrNotFound(xyzDTO);
+        return ResponseEntity.of(xyzDTO);
     }
 
     /**

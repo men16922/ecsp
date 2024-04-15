@@ -130,6 +130,7 @@ public class AbcServiceImpl implements AbcService {
     @Override
     public AbcDTO getAbc(String id) {
         try {
+            log.info("CHECK : {}", id);
             return abcServiceClient.getAbc(id);
         }
         catch (NoSuchElementException err) {
